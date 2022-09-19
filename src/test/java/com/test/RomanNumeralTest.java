@@ -4,7 +4,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class RomanNumeralTest {
 
@@ -18,5 +17,10 @@ class RomanNumeralTest {
     @Test
     void shouldReturnRomanNumeralOf1() {
         assertEquals("I", romanNumeral.convert(1));
+    }
+
+    @Test
+    void shouldReturnRomanNumeralOf2() {
+        assertEquals("II", romanNumeral.convert(2));
     }
 }
