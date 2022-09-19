@@ -1,9 +1,15 @@
 # roman-numeral
 
-### How to run unit test
+### How to run unit tests
 
-Run following command on terminal
+From terminal
 
 ```
 mvn clean test
+```
+
+From IDE
+
+```
+run `RomanNumeralTest` class
 ```
