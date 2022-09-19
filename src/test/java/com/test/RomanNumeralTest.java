@@ -75,7 +75,13 @@ class RomanNumeralTest {
                 Arguments.of(47, "XLVII"),
                 Arguments.of(48, "XLVIII"),
                 Arguments.of(49, "XLIX"),
-                Arguments.of(50, "L")
+                Arguments.of(50, "L"),
+                Arguments.of(54, "LIV"),
+                Arguments.of(55, "LV"),
+                Arguments.of(56, "LVI"),
+                Arguments.of(60, "LX"),
+                Arguments.of(78, "LXXVIII"),
+                Arguments.of(89, "LXXXIX")
 
                 );
     }
