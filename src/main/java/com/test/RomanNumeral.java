@@ -8,16 +8,27 @@ public class RomanNumeral {
             1, "I",
             2, "II",
             3, "III",
-            4, "IV",
-            5, "V",
-            6, "VI",
-            7, "VII",
-            8, "VIII",
-            9, "IX",
-            10, "X");
+            4, "IV");
 
     public String convert(int number) {
-        return romanNumeralsMap.get(number);
+        StringBuilder romanNumeral = new StringBuilder();
+        while (number >= 10) {
+            number = number % 10;
+            romanNumeral.append("X");
+        }
+        while (number >= 9) {
+            number = number % 9;
+            romanNumeral.append("IX");
+        }
+        while (number >= 5) {
+            number = number % 5;
+            romanNumeral.append("V");
+        }
+        if (number > 0) {
+            romanNumeral.append(romanNumeralsMap.get(number));
+        }
+
+        return romanNumeral.toString();
     }
 
 }
