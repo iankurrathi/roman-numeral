@@ -4,6 +4,7 @@ public class RomanNumeral {
 
     public String convert(int number) {
         StringBuilder romanNumeral = new StringBuilder();
+        number = remainder(number, romanNumeral, 40, "XL");
         number = remainder(number, romanNumeral, 10, "X");
         number = remainder(number, romanNumeral, 9, "IX");
         number = remainder(number, romanNumeral, 5, "V");
