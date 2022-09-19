@@ -89,7 +89,8 @@ class RomanNumeralTest {
                 Arguments.of(400, "CD"),
                 Arguments.of(475, "CDLXXV"),
                 Arguments.of(500, "D"),
-                Arguments.of(900, "CM")
+                Arguments.of(900, "CM"),
+                Arguments.of(1000, "M")
 
 
                 );

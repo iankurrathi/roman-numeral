@@ -8,6 +8,7 @@ public class RomanNumeral {
     private static final Map<Integer, String> romanSymbols = new LinkedHashMap<>();
 
     static {
+        romanSymbols.put(1000, "M");
         romanSymbols.put(900, "CM");
         romanSymbols.put(500, "D");
         romanSymbols.put(400, "CD");
