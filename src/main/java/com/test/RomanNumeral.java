@@ -1,18 +1,28 @@
 package com.test;
 
+import java.util.LinkedHashMap;
+import java.util.Map;
+
 public class RomanNumeral {
+
+    private static final Map<Integer, String> romanSymbols = new LinkedHashMap<>();
+
+    static {
+        romanSymbols.put(40, "XL");
+        romanSymbols.put(10, "X");
+        romanSymbols.put(9, "IX");
+        romanSymbols.put(5, "V");
+        romanSymbols.put(4, "IV");
+        romanSymbols.put(3, "III");
+        romanSymbols.put(2, "II");
+        romanSymbols.put(1, "I");
+    }
 
     public String convert(int number) {
         StringBuilder romanNumeral = new StringBuilder();
-        number = remainder(number, romanNumeral, 40, "XL");
-        number = remainder(number, romanNumeral, 10, "X");
-        number = remainder(number, romanNumeral, 9, "IX");
-        number = remainder(number, romanNumeral, 5, "V");
-        number = remainder(number, romanNumeral, 4, "IV");
-        number = remainder(number, romanNumeral, 3, "III");
-        number = remainder(number, romanNumeral, 2, "II");
-        remainder(number, romanNumeral, 1, "I");
-
+        for (Map.Entry<Integer, String> entry : romanSymbols.entrySet()) {
+            number = remainder(number, romanNumeral, entry.getKey(), entry.getValue());
+        }
         return romanNumeral.toString();
     }
 
