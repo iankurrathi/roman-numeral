@@ -23,4 +23,9 @@ class RomanNumeralTest {
     void shouldReturnRomanNumeralOf2() {
         assertEquals("II", romanNumeral.convert(2));
     }
+
+    @Test
+    void shouldReturnRomanNumeralOf3() {
+        assertEquals("III", romanNumeral.convert(3));
+    }
 }
