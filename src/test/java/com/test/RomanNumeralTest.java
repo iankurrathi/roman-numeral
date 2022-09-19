@@ -102,8 +102,6 @@ class RomanNumeralTest {
                 Arguments.of(1918, "MCMXVIII"),
                 Arguments.of(1954, "MCMLIV"),
                 Arguments.of(2014, "MMXIV")
-
-
-                );
+        );
     }
 }
