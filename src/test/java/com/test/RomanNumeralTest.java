@@ -15,52 +15,57 @@ class RomanNumeralTest {
     }
 
     @Test
-    void shouldReturnRomanNumeralOf1() {
+    void shouldConvertNumber1() {
         assertEquals("I", romanNumeral.convert(1));
     }
 
     @Test
-    void shouldReturnRomanNumeralOf2() {
+    void shouldConvertNumber2() {
         assertEquals("II", romanNumeral.convert(2));
     }
 
     @Test
-    void shouldReturnRomanNumeralOf3() {
+    void shouldConvertNumber3() {
         assertEquals("III", romanNumeral.convert(3));
     }
 
     @Test
-    void shouldReturnRomanNumeralOf4() {
+    void shouldConvertNumber4() {
         assertEquals("IV", romanNumeral.convert(4));
     }
 
     @Test
-    void shouldReturnRomanNumeralOf5() {
+    void shouldConvertNumber5() {
         assertEquals("V", romanNumeral.convert(5));
     }
 
     @Test
-    void shouldReturnRomanNumeralOf6() {
+    void shouldConvertNumber6() {
         assertEquals("VI", romanNumeral.convert(6));
     }
 
     @Test
-    void shouldReturnRomanNumeralOf7() {
+    void shouldConvertNumber7() {
         assertEquals("VII", romanNumeral.convert(7));
     }
 
     @Test
-    void shouldReturnRomanNumeralOf8() {
+    void shouldConvertNumber8() {
         assertEquals("VIII", romanNumeral.convert(8));
     }
 
     @Test
-    void shouldReturnRomanNumeralOf9() {
+    void shouldConvertNumber9() {
         assertEquals("IX", romanNumeral.convert(9));
     }
 
     @Test
-    void shouldReturnRomanNumeralOf10() {
+    void shouldConvertNumber10() {
         assertEquals("X", romanNumeral.convert(10));
+    }
+
+    @Test
+    void shouldConvertNumber11() {
+        assertEquals("XI", romanNumeral.convert(11));
     }
 }
