@@ -90,7 +90,18 @@ class RomanNumeralTest {
                 Arguments.of(475, "CDLXXV"),
                 Arguments.of(500, "D"),
                 Arguments.of(900, "CM"),
-                Arguments.of(1000, "M")
+                Arguments.of(1000, "M"),
+                Arguments.of(789, "DCCLXXXIX"),
+                Arguments.of(2421, "MMCDXXI"),
+                Arguments.of(160, "CLX"),
+                Arguments.of(207, "CCVII"),
+                Arguments.of(207, "CCVII"),
+                Arguments.of(1009, "MIX"),
+                Arguments.of(1066, "MLXVI"),
+                Arguments.of(1776, "MDCCLXXVI"),
+                Arguments.of(1918, "MCMXVIII"),
+                Arguments.of(1954, "MCMLIV"),
+                Arguments.of(2014, "MMXIV")
 
 
                 );
