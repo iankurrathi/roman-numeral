@@ -1,7 +1,11 @@
 package com.test;
 
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
+
+import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -14,58 +18,25 @@ class RomanNumeralTest {
         romanNumeral = new RomanNumeral();
     }
 
-    @Test
-    void shouldConvertNumber1() {
-        assertEquals("I", romanNumeral.convert(1));
+    @ParameterizedTest
+    @MethodSource("providesNumberAndExpectedRomanSymbol")
+    void shouldConvertNumber(int number, String expectedRomanSymbol) {
+        assertEquals(expectedRomanSymbol, romanNumeral.convert(number));
     }
 
-    @Test
-    void shouldConvertNumber2() {
-        assertEquals("II", romanNumeral.convert(2));
-    }
-
-    @Test
-    void shouldConvertNumber3() {
-        assertEquals("III", romanNumeral.convert(3));
-    }
-
-    @Test
-    void shouldConvertNumber4() {
-        assertEquals("IV", romanNumeral.convert(4));
-    }
-
-    @Test
-    void shouldConvertNumber5() {
-        assertEquals("V", romanNumeral.convert(5));
-    }
-
-    @Test
-    void shouldConvertNumber6() {
-        assertEquals("VI", romanNumeral.convert(6));
-    }
-
-    @Test
-    void shouldConvertNumber7() {
-        assertEquals("VII", romanNumeral.convert(7));
-    }
-
-    @Test
-    void shouldConvertNumber8() {
-        assertEquals("VIII", romanNumeral.convert(8));
-    }
-
-    @Test
-    void shouldConvertNumber9() {
-        assertEquals("IX", romanNumeral.convert(9));
-    }
-
-    @Test
-    void shouldConvertNumber10() {
-        assertEquals("X", romanNumeral.convert(10));
-    }
-
-    @Test
-    void shouldConvertNumber11() {
-        assertEquals("XI", romanNumeral.convert(11));
+    private static Stream<Arguments> providesNumberAndExpectedRomanSymbol() {
+        return Stream.of(
+                Arguments.of(1, "I"),
+                Arguments.of(2, "II"),
+                Arguments.of(3, "III"),
+                Arguments.of(4, "IV"),
+                Arguments.of(5, "V"),
+                Arguments.of(6, "VI"),
+                Arguments.of(7, "VII"),
+                Arguments.of(8, "VIII"),
+                Arguments.of(9, "IX"),
+                Arguments.of(10, "X"),
+                Arguments.of(11, "XI")
+                );
     }
 }
