@@ -17,7 +17,7 @@ public class RomanNumeral {
 
     private int remainder(int number, StringBuilder romanNumeral, int divisor, String romanSymbol) {
         while (number >= divisor) {
-            number = number % divisor;
+            number = number - divisor;
             romanNumeral.append(romanSymbol);
         }
         return number;
